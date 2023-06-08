@@ -20,3 +20,21 @@ navLinks.forEach(link => {
     }
 })
 
+// make index.html page active on page load
+const baseURI = document.baseURI;
+const homePageAnchor = document.getElementById('home');
+
+window.addEventListener('load', () => {
+    if(baseURI) {
+        homePageAnchor.setAttribute('aria-current', "page");
+    }
+});
+
+// Escape button to increase accessibility
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        mobileMenu.classList.remove("active");
+        mobileMenuTrigger.classList.remove("active");
+    }
+})
+
