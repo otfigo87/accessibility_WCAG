@@ -122,5 +122,24 @@ a {
 }
 
 @media screen and (min-width: 1025px) {
-    
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+    .nav-logo-container {
+        padding: 0px;
+    }
+    .nav-links-container{
+        display: flex;
+        width:100%
+    }
+    .nav-links{
+        flex: 1;
+        align-items: center;
+    }
+    .nav-socials {
+        align-items: center;
+        padding: 0px;
+    }   
 }
