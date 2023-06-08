@@ -27,6 +27,27 @@ a {
     box-shadow: 2px 2px 8px -6px #101a67;
 }
 
+.facebook-icon-gradient {
+    background: -webkit-linear-gradient(#0165E1, #17A9FD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #4e6e8d38;
+}
+
+.instagram-icon-gradient {
+    background: -webkit-linear-gradient(#405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #4e6e8d38;
+}
+
+.twitter-icon-gradient {
+    background: #1D9BF0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #4e6e8d38;
+}
+
 #mobileMenuTrigger {
     border: none;
     background-color: transparent;
@@ -141,5 +162,45 @@ a {
     .nav-socials {
         align-items: center;
         padding: 0px;
-    }   
+    }  
+    /* Pseudo-elements and Pseudo-classes */
+.nav-links-container .nav-socials a {
+    position: relative;
+}
+
+.nav-links-container .nav-socials a::before {
+    content: "";
+    height: 15px;
+    background-color: rgba(177, 177, 177, 0.47);
+    position: absolute;
+    bottom: -13px;
+    left: 0px;
+    right: 0px;
+    filter: blur(10px);
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+.nav-links-container .nav-socials a:hover::before {
+    transform: rotateX(85deg);
+}
+
+.nav-links li a {
+    position: relative;
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    height: 2px;
+    width: 0px;
+    background: black;
+    transition: width 0.5s ease;
+}
+
+.nav-links li a:hover::before {
+    width: 30px;
+}
+ 
 }
