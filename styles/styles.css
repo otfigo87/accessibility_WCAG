@@ -23,6 +23,16 @@ a {
     color: rgb(68,68,68);
 }
 
+.nav-links li a[aria-current="page"] {
+    background-color: rgb(205, 205, 242);
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+.nav-links li a[aria-current="page"]:hover::before {
+    display: none;
+}
+
 #navbar {
     box-shadow: 2px 2px 8px -6px #101a67;
 }
